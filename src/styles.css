@@ -2,7 +2,8 @@
 
 :root {
   --primary-app-color: #02203c;
-  --secondary-app-color: #001528;
+  --secondary-app-color: #ce00ac;
+  --standout-color: rgb(0, 247, 0);
 }
 .App {
 }
@@ -17,7 +18,7 @@
     var(--primary-app-color),
     var(--secondary-app-color)
   );
-  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  clip-path: polygon(15 0, 85% 0, 85% 100%, 15% 100%);
 }
 
 .nav-items {
@@ -33,4 +34,76 @@
 }
 .px-10 {
   padding-inline: 90px;
+}
+.herosection2 {
+  padding-top: 60px;
+}
+.Im-text-section {
+  padding-top: 52px;
+  text-align: center;
+}
+.Im-text {
+  font-family: "ubuntu";
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.name-Im-text {
+  color: var(--standout-color);
+  font-size: 18px;
+}
+.Im-text-enthusiastic {
+  font-family: "ubuntu";
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.Im-text-subheading {
+  font-family: "ubuntu";
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.btn-hire-me {
+  font-size: 1.3rem;
+  font-family: "ubuntu";
+  color: #fff;
+  background: transparent;
+  border-radius: 25px;
+  margin-inline: 12px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  animation: Anim 1s ease-in-out backwards;
+}
+.btn-hire-me:hover {
+  transform: translateY(-5px);
+  background-color: var(--standout-color);
+  color: #1c1c1c;
+}
+.btn-resume-me {
+  font-size: 1.3rem;
+  font-family: "ubuntu";
+  color: #fff;
+  background: red;
+  border-radius: 25px;
+  margin-inline: 12px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+.btn-resume-me:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes Anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
