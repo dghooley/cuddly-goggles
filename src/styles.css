@@ -17,12 +17,20 @@
     var(--primary-app-color),
     var(--secondary-app-color)
   );
-  clip-path: polygon(50 0%, 100% 0%, 100% 75%, 50% 100%, 0 75%);
+  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
 }
 
 .nav-items {
   cursor: pointer;
   color: #ffffff;
-  font-size: 1.3rem;
-  font-family: "Ubunto";
+  font-size: 1.2rem;
+  font-family: "Ubuntu";
+}
+.brand-name {
+  font-family: "Oswald";
+  color: #ffffff;
+  font-size: 2rem;
+}
+.px-10 {
+  padding-inline: 90px;
 }
