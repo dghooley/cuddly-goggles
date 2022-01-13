@@ -107,3 +107,11 @@
     transform: scale(1);
   }
 }
+.custom-img {
+  width: 300px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+}

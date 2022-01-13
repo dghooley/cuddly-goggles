@@ -28,8 +28,45 @@ export default function App() {
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12">
-            <div className="d-flex justify-content-center custom-div-outer-img">
-              <img className="img-fluid" alt="heroimage" src="" />
+            <div className="d-flex justify-content-center Anim">
+              <img className="img-fluid custom-img" alt="heroimage" src="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-me-section aboutme-inside my-5">
+        <div className="d-flex flex-column">
+          <span className="about-me-text"> About me </span>
+          <span className="why-text-sub"> Why hire me? </span>
+          <div className="row justify-content-center shadow-lg my-5">
+            <div className="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
+              <lottie-player
+                src="https://assets6.lottiefiles.com/packages/lf20_qrqpmvph.json"
+                background="transparent"
+                speed="1"
+                style={{ width: "500px", height: "500px" }}
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 py-5 d-flex flex-column">
+              <span className="some-text-about-me">
+                Full stack web developer with a background in graphic design and
+                recent training and certification in MERN Stack, CRUD
+                operations, and agile development.
+              </span>
+              <span className="few-highlights">
+                <span className="few-text">Here are a few highlights</span>
+                <span className="few-list">
+                  <ul>
+                    <li> Full Stack web and mobile web development </li>
+                    <li> HTML5, CSS, Javascript, JSON </li>
+                    <li> Node JS, Express, MongoDB, REACT </li>
+                    <li> Adherence to preferred UX/UI methodologies </li>
+                  </ul>
+                </span>
+              </span>
             </div>
           </div>
         </div>
