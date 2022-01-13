@@ -1,6 +1,15 @@
+import { useState } from "react";
+import Education from "./Education";
 import "./styles.css";
 
 export default function App() {
+  useState;
+
+  const [education, seteducation] = useState(true);
+  const [workhistory, setworkhistory] = useState(false);
+  const [programmings, setprogrammings] = useState(false);
+  const [projects, setprojects] = useState(false);
+
   return (
     <div className="App">
       <div className="herosection px-10 py-5">
@@ -20,7 +29,10 @@ export default function App() {
             <span className="Im-text">
               Hello, I'm <span className="name-Im-text">Derick Hooley</span>
             </span>
-            <span className="Im-text-enthusiastic py-2"> an enthusiastic, </span>
+            <span className="Im-text-enthusiastic py-2">
+              {" "}
+              an enthusiastic,{" "}
+            </span>
             <span className="Im-text-subheading">junior web developer</span>
             <div className="d-flex flex-row justify-content-center mt-5">
               <button className="btn-hire-me">Hire me</button>
@@ -29,7 +41,11 @@ export default function App() {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="d-flex justify-content-center Anim">
-              <img className="img-fluid custom-img" alt="heroimage" src="https://res.cloudinary.com/dx5ybevyx/image/upload/v1642044048/IMG_6026_g0hziy.jpg" />
+              <img
+                className="img-fluid custom-img"
+                alt="heroimage"
+                src="https://res.cloudinary.com/dx5ybevyx/image/upload/v1642044048/IMG_6026_g0hziy.jpg"
+              />
             </div>
           </div>
         </div>
@@ -68,6 +84,50 @@ export default function App() {
                 </span>
               </span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="resume-outer-section d-flex flex-column">
+        <span className="about-me-text"> Resume </span>
+        <span className="why-text-sub"> My Bio Details </span>
+
+        <div className="resume-new-section row">
+          <div
+            className="col-lg-4 col-md-4 resume-left-section d-flex flex-row"
+            style={{ width: "70%", marginInLine: "auto" }}
+          >
+            <div className="d-flex flex-column bg-new text-dark">
+              <span class="icons-span">
+                <i class="fas fa-graduation-cap"></i>
+                {""}
+              </span>
+              <span class="icons-span">
+                <i class="fas fa-briefcase"></i>
+                {""}
+              </span>
+              <span class="icons-span">
+                <i class="far fa-file-code"></i>
+                {""}
+              </span>
+              <span class="icons-span">
+                <i class="fas fa-project-diagram"></i>
+                {""}
+              </span>
+            </div>
+
+            <div className="d-flex flex-column">
+              <span className="resume-options-items"> Education </span>
+              <span className="resume-options-items"> Work </span>
+              <span className="resume-options-items"> Programming </span>
+              <span className="resume-options-items"> Projects </span>
+            </div>
+          </div>
+          <div className="col-lg-8 col-md-8 resume-right-section">
+            {education === true && <Education />}
+            {workhistory === true && <Work />}
+            {programmings === true && <Programming />}
+            {projects === true && <Projects />}
           </div>
         </div>
       </div>
