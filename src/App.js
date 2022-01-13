@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Education from "./Education";
+import Programming from "./Programming";
+import Projects from "./Projects";
+import Work from "./Work"
 import "./styles.css";
 
 export default function App() {
-  useState;
+
 
   const [education, seteducation] = useState(true);
   const [workhistory, setworkhistory] = useState(false);
@@ -91,11 +94,12 @@ export default function App() {
       <div className="resume-outer-section d-flex flex-column">
         <span className="about-me-text"> Resume </span>
         <span className="why-text-sub"> My Bio Details </span>
-
-        <div className="resume-new-section row">
-          <div
-            className="col-lg-4 col-md-4 resume-left-section d-flex flex-row"
-            style={{ width: "70%", marginInLine: "auto" }}
+        <div 
+          className="resume-new-section row"
+          style={{ width: "70%", marginInline: "auto", height:"400px"}}
+          >
+          <div className="col-lg-4 col-md-4 resume-left-section d-flex px-0 shadow-lg flex-row"
+          
           >
             <div className="d-flex flex-column bg-new text-dark">
               <span class="icons-span">
@@ -107,7 +111,7 @@ export default function App() {
                 {""}
               </span>
               <span class="icons-span">
-                <i class="far fa-file-code"></i>
+                <i class="fas fa-file-code"></i>
                 {""}
               </span>
               <span class="icons-span">
@@ -115,7 +119,6 @@ export default function App() {
                 {""}
               </span>
             </div>
-
             <div className="d-flex flex-column">
               <span className="resume-options-items"> Education </span>
               <span className="resume-options-items"> Work </span>
@@ -123,6 +126,7 @@ export default function App() {
               <span className="resume-options-items"> Projects </span>
             </div>
           </div>
+          
           <div className="col-lg-8 col-md-8 resume-right-section">
             {education === true && <Education />}
             {workhistory === true && <Work />}
