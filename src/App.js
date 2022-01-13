@@ -20,7 +20,7 @@ export default function App() {
             <span className="Im-text">
               Hello, I'm <span className="name-Im-text">Derick Hooley</span>
             </span>
-            <span className="Im-text-enthusiastic py-2"> an enthusiastic </span>
+            <span className="Im-text-enthusiastic py-2"> an enthusiastic, </span>
             <span className="Im-text-subheading">junior web developer</span>
             <div className="d-flex flex-row justify-content-center mt-5">
               <button className="btn-hire-me">Hire me</button>
@@ -29,7 +29,7 @@ export default function App() {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="d-flex justify-content-center Anim">
-              <img className="img-fluid custom-img" alt="heroimage" src="" />
+              <img className="img-fluid custom-img" alt="heroimage" src="https://res.cloudinary.com/dx5ybevyx/image/upload/v1642044048/IMG_6026_g0hziy.jpg" />
             </div>
           </div>
         </div>
@@ -53,17 +53,17 @@ export default function App() {
             <div className="col-lg-6 col-md-6 col-sm-12 py-5 d-flex flex-column">
               <span className="some-text-about-me">
                 Full stack web developer with a background in graphic design and
-                recent training and certification in MERN Stack, CRUD
+                most recently, training and certification in MERN Stack, CRUD
                 operations, and agile development.
               </span>
               <span className="few-highlights">
-                <span className="few-text">Here are a few highlights</span>
+                <span className="few-text">Here are a few highlights:</span>
                 <span className="few-list">
                   <ul>
                     <li> Full Stack web and mobile web development </li>
                     <li> HTML5, CSS, Javascript, JSON </li>
                     <li> Node JS, Express, MongoDB, REACT </li>
-                    <li> Adherence to preferred UX/UI methodologies </li>
+                    <li> Adherence to preferred design methodologies </li>
                   </ul>
                 </span>
               </span>
