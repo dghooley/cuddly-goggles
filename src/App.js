@@ -1,17 +1,26 @@
 import { useState } from "react";
 import Education from "./Education";
-import Programming from "./Programming";
-import Projects from "./Projects";
-import Work from "./Work"
 import "./styles.css";
 
 export default function App() {
-
+  useState;
 
   const [education, seteducation] = useState(true);
   const [workhistory, setworkhistory] = useState(false);
   const [programmings, setprogrammings] = useState(false);
   const [projects, setprojects] = useState(false);
+
+  function SetAllFalse() {
+    seteducation(false);
+    setworkhistory(false);
+    setprogrammings(false);
+    setprojects(false);
+  }
+
+  function ChangeState(function1, state1) {
+    setAllFalse();
+    function1(state1);
+  }
 
   return (
     <div className="App">
@@ -94,39 +103,61 @@ export default function App() {
       <div className="resume-outer-section d-flex flex-column">
         <span className="about-me-text"> Resume </span>
         <span className="why-text-sub"> My Bio Details </span>
-        <div 
+
+        <div
           className="resume-new-section row"
-          style={{ width: "70%", marginInline: "auto", height:"400px"}}
-          >
-          <div className="col-lg-4 col-md-4 resume-left-section d-flex px-0 shadow-lg flex-row"
-          
-          >
+          style={{ width: "70%", marginInline: "auto", height: "400px" }}
+        >
+          <div className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row">
             <div className="d-flex flex-column bg-new text-dark">
               <span class="icons-span">
-                <i class="fas fa-graduation-cap"></i>
-                {""}
+                <i class="fas fa-graduation-cap"></i>{" "}
               </span>
               <span class="icons-span">
-                <i class="fas fa-briefcase"></i>
-                {""}
+                <i class="fas fa-briefcase"></i>{" "}
               </span>
               <span class="icons-span">
-                <i class="fas fa-file-code"></i>
-                {""}
+                <i class="fas fa-code"></i>{" "}
               </span>
               <span class="icons-span">
-                <i class="fas fa-project-diagram"></i>
-                {""}
+                <i class="fas fa-project-diagram"></i>{" "}
               </span>
             </div>
             <div className="d-flex flex-column">
-              <span className="resume-options-items"> Education </span>
-              <span className="resume-options-items"> Work </span>
-              <span className="resume-options-items"> Programming </span>
-              <span className="resume-options-items"> Projects </span>
+              <span
+                className="resume-options-items"
+                onClick={() => {
+                  seteducation(true);
+                }}
+              >
+                Education{" "}
+              </span>
+              <span
+                className="resume-options-items"
+                onClick={() => {
+                  setworkhistory(true);
+                }}
+              >
+                Work{" "}
+              </span>
+              <span
+                className="resume-options-items"
+                onClick={() => {
+                  setprogrammings(true);
+                }}
+              >
+                Programming{" "}
+              </span>
+              <span
+                className="resume-options-items"
+                onClick={() => {
+                  setprojects(true);
+                }}
+              >
+                Projects{" "}
+              </span>
             </div>
           </div>
-          
           <div className="col-lg-8 col-md-8 resume-right-section">
             {education === true && <Education />}
             {workhistory === true && <Work />}
