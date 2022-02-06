@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Education from "./Education";
 import "./styles.css";
+import Work from "./Work";
+import Programming from "./Programming";
+import Projects from "./Projects";
+import Index from "./index";
 
 export default function App() {
   useState;
@@ -18,7 +22,7 @@ export default function App() {
   }
 
   function ChangeState(function1, state1) {
-    setAllFalse();
+    SetAllFalse();
     function1(state1);
   }
 
@@ -109,7 +113,7 @@ export default function App() {
           style={{ width: "70%", marginInline: "auto", height: "400px" }}
         >
           <div className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row">
-            <div className="d-flex flex-column bg-new text-dark">
+            <div className="d-flex flex-column bg-new text-white">
               <span class="icons-span">
                 <i class="fas fa-graduation-cap"></i>{" "}
               </span>
@@ -125,33 +129,49 @@ export default function App() {
             </div>
             <div className="d-flex flex-column">
               <span
-                className="resume-options-items"
+                className={
+                  education === false
+                    ? " resume-options-items"
+                    : " selected resume-options-items"
+                }
                 onClick={() => {
-                  seteducation(true);
+                  ChangeState(seteducation, true);
                 }}
               >
                 Education{" "}
               </span>
               <span
-                className="resume-options-items"
+                className={
+                  workhistory === false
+                    ? " resume-options-items"
+                    : " selected resume-options-items"
+                }
                 onClick={() => {
-                  setworkhistory(true);
+                  ChangeState(setworkhistory, true);
                 }}
               >
                 Work{" "}
               </span>
               <span
-                className="resume-options-items"
+                className={
+                  programmings === false
+                    ? " resume-options-items"
+                    : " selected resume-options-items"
+                }
                 onClick={() => {
-                  setprogrammings(true);
+                  ChangeState(setprogrammings, true);
                 }}
               >
                 Programming{" "}
               </span>
               <span
-                className="resume-options-items"
+                className={
+                  projects === false
+                    ? " resume-options-items"
+                    : " selected resume-options-items"
+                }
                 onClick={() => {
-                  setprojects(true);
+                  ChangeState(setprojects, true);
                 }}
               >
                 Projects{" "}

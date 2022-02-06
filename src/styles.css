@@ -18,7 +18,7 @@
     var(--primary-app-color),
     var(--secondary-app-color)
   );
-  clip-path: polygon(50% 0%, 100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+  clip-path: polygon(15 0, 85% 0, 85% 100%, 15% 100%);
 }
 
 .nav-items {
@@ -109,18 +109,15 @@
 }
 .custom-img {
   width: 300px;
-  border-radius: 100%;
+  border-radius: 50%;
   object-fit: contain;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-bottom: 12px;
 }
 
 /* about me section*/
-.about-me-text{
+.about-me-text {
   font-family: "ubuntu";
   font-weight: 800;
   font-size: 3.5rem;
@@ -128,7 +125,7 @@
   letter-spacing: 1px;
   text-align: center;
 }
-.why-text-sub{
+.why-text-sub {
   font-family: "ubuntu";
   font-weight: 700;
   font-size: 1.1rem;
@@ -136,11 +133,11 @@
   text-transform: capitalize;
   text-align: center;
 }
-.aboutme-inside{
+.aboutme-inside {
   width: 70%;
   margin-inline: auto;
 }
-.some-text-about-me{
+.some-text-about-me {
   font-family: "ubuntu";
   font-weight: 600;
   font-size: 1.1rem;
@@ -150,11 +147,11 @@
   text-align: justify;
 }
 
-.few-highlights{
+.few-highlights {
   font-family: "ubuntu";
   padding-block: 60px;
 }
-.few-text{
+.few-text {
   font-family: "ubuntu";
   font-weight: 600;
   font-size: 1.1rem;
@@ -162,3 +159,55 @@
   text-align: justify;
 }
 
+/* resume css */
+.resume-options-items {
+  width: 1%;
+  transition: all 0.3s ease-in-out;
+  padding-block: 24px;
+  padding-inline: 24px;
+  color: #000;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.resume-options-items:hover {
+  width: 100%;
+  background: linear-gradient(
+    -90deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+  color: #fff;
+}
+.icons-span {
+  margin-block: 24px;
+  margin-inline: 24px;
+}
+.selected {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+  width: 100%;
+  color: #fff;
+}
+.bg-new {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+}
+.resume-outer-section {
+  padding-top: 100px;
+  padding-bottome: 100px;
+  background-color: var(--primary-app-color);
+  color: #fff;
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
+}
+.resume-new-section {
+  margin-top: 42px;
+  background: #fff;
+  box-shadow: 10px 10px 31px 2px #1c1c1c;
+}
